@@ -1,8 +1,10 @@
 {
 	"name": "hack-bot",
-	"version": "0.1",
+	"version": "0.1.1",
 	"description": "Hackbot",
 	"main": "bot.js",
 	"author": "krikkt",
-	"dependencies": {}
+	"dependencies": {
+		"discord.js": "^11.5.1"
+	}
 }
