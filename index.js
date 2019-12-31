@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-var auth = require('./auth.json');
 var client = new Discord.Client();
 const moment = require("moment");
 
@@ -8,10 +7,12 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-	if (msg.content === 'ping') {
+	if (msg.content === '!ping') {
 		msg.reply('Pong!')
-	} else if (msg.content.indexOf("settime") !== -1) {
+	} else if (msg.content.startsWith("!settime")) {
 		saveTime(msg);
+	} else if (msg.content === "!time") {
+		getTime(msg);
 	}
 });
 
@@ -28,4 +29,4 @@ function getTime(msg) {
 	msg.reply(`Moment time: ${this.time.toString()}`)
 }
 
-client.login(auth.token)
+client.login(process.env.BOT_TOKEN)
