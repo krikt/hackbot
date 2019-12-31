@@ -4,7 +4,14 @@
 	"description": "Hackbot",
 	"main": "bot.js",
 	"author": "krikkt",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js"
+	},
 	"dependencies": {
 		"discord.js": "^11.5.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2"
 	}
 }
